@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BaseBenchmark.ClassStructTest.ClassStructExample-20220719-103544</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1826 (21H2)
+Intel Xeon CPU E3-1230 V2 3.30GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=6.0.100
+  [Host]     : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
+  DefaultJob : .NET 6.0.0 (6.0.21.52210), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th> Method</th><th>val</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen 0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>CalcStruct</td><td>10</td><td>17.58 ns</td><td>0.376 ns</td><td>0.418 ns</td><td>0.0153</td><td>64 B</td>
+</tr><tr><td>CalcStructRef</td><td>10</td><td>18.53 ns</td><td>0.403 ns</td><td>0.661 ns</td><td>0.0153</td><td>64 B</td>
+</tr><tr><td>CalcClass</td><td>10</td><td>118.80 ns</td><td>2.393 ns</td><td>4.254 ns</td><td>0.0823</td><td>344 B</td>
+</tr></tbody></table>
+</body>
+</html>
