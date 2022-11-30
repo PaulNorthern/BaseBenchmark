@@ -7,13 +7,13 @@ public struct MyStruct
     public int Value;
 }
 
-public class MyClass
+public sealed class MyClass
 {
     public int Value;
 }
 
 [MemoryDiagnoser()]
-public class ClassStructExample
+public sealed class ClassStructExample
 {
     [Benchmark]
     [Arguments(10)]
